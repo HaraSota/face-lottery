@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/face-lottery/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>face-lottery</title>
+    <script type="module" crossorigin src="/face-lottery/assets/index-ycGyUjNV.js"></script>
+  </head>
+<body>
+<!-- index.html（Videoのみ＋リザルト＋戻る） -->
+<button id="startVideo">カメラ開始</button>
+<button id="spin" disabled>抽選開始</button>
+
+<div id="resultUI" style="display:none; margin-top:8px;">
+  <button id="back">戻る</button>
+</div>
+
+<div id="status" style="margin-top:8px; font-size:12px;"></div>
+
+<div id="stage" style="position:relative; width:100%; max-width:720px;">
+  <video id="video" autoplay playsinline muted style="width:100%; display:block;"></video>
+  <canvas id="overlay" style="position:absolute; left:0; top:0;"></canvas>
+  <canvas id="resultCanvas" style="position:absolute; left:0; top:0; display:none;"></canvas>
+</div>
+
+
+
+</body>
+</html>
