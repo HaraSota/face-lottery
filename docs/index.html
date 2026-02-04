@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>顔ランダム抽選</title>
+
+  <!-- ★Viteは/srcを参照 -->
+  <script type="module" crossorigin src="/face-lottery/assets/index-osFr9ylE.js"></script>
+  <link rel="stylesheet" crossorigin href="/face-lottery/assets/index-T5ACXSuL.css">
+</head>
+
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="title">顔ランダム抽選</div>
+      <div id="status" class="status">カメラを開始してください</div>
+    </header>
+
+    <div class="description">
+      カメラに映っている人の中から、ランダムで1人を選びます。
+    </div>
+
+    <div class="controls">
+      <button id="toggleCamera" class="btn btn-primary">カメラ開始</button>
+      <button id="switchCam" class="btn btn-ghost" disabled>内 / 外 切替</button>
+      <button id="spin" class="btn btn-accent" disabled>抽選開始</button>
+
+      <div id="resultUI" style="display:none;">
+        <button id="back" class="btn btn-ghost">戻る</button>
+      </div>
+    </div>
+
+    <div id="stage" class="stage">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="overlay" class="layer"></canvas>
+      <canvas id="resultCanvas" class="layer" style="display:none;"></canvas>
+      <div id="resultText" class="result-text" style="display:none;"></div>
+    </div>
+
+    <footer class="footer">
+      Safari(iOS)ではカメラの許可が必要です
+    </footer>
+  </div>
+
+  <!-- ★Viteは/srcを参照 -->
+</body>
+</html>
